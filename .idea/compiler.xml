@@ -7,21 +7,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="jdbc-database" />
-        <module name="jdbc-driver" />
-        <module name="sql-server" />
-        <module name="postgresql" />
-        <module name="mysql" />
         <module name="base-datasource" />
         <module name="oracle" />
         <module name="sybase" />
         <module name="relational-database-test" />
         <module name="commons-dbcp2" />
+        <module name="design-jdbc-driver" />
+        <module name="sql-server" />
         <module name="hikaricp" />
         <module name="h2-db" />
         <module name="sql-lite" />
+        <module name="postgresql" />
         <module name="orm-design-core" />
         <module name="entity-class-parser" />
+        <module name="mysql" />
+        <module name="relational-database-core" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
