@@ -1,4 +1,10 @@
-Java JDBC Transaction执行操作
+TODO. ACID 事务的四个核心特征
+1. Atomicity  原子性: 事务是一个原子执行单元，全部执行或者不执行
+2. Consistent 一致性: 所有相关的数据都应用于事务的修改，确保数据库在成功提交事务后正确更改状态
+3. Isolation  隔离性: 并发执行的事务彼此无法看到彼此的中间状态
+4. Durable    持久性: 数据修改是永久性的
+
+JDBC Transaction执行操作
 1. Turn off auto-commit: 默认是自动提交
    connection.setAutoCommit(false); Select查询同样需要注意事务
 2. Perform the SQL Operations
@@ -18,7 +24,3 @@ Java JDBC Transaction执行操作
    反例: X线程锁表顺序为AB，Y线程锁表顺序为BA。并发场景会导致死锁
 3. 保持事务短小,事务占有时间越短越好
    事务长时间锁表会严重阻塞其他SQL语句的执行
-
-TODO. 如何提高需要执行大量Query的事务操作 ?
-1. 通过执行Batch Query减少对DB的并发请求，提高执行效率
-2. 将相互独立的Query并发执行，同步完成并发修改的操作

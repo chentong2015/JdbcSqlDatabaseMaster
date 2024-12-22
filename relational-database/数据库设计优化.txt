@@ -1,6 +1,6 @@
 Catalog和Schema是相同的概念
- - Catalog is used with Oracle, DB2 and MySQL
- - Schema is for PostgresSQL
+- Catalog is used with Oracle, DB2 and MySQL
+- Schema is for PostgresSQL
 
 基本原则: 满足数据库开发常见规范和约束
 基础优化策略：数据库表优化，索引优化，SQL慢查询的优化
