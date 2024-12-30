@@ -18,11 +18,10 @@
     </properties>
 
     <modules>
-        <module>h2-db</module>
+        <module>embedded</module>
         <module>mysql</module>
         <module>oracle</module>
         <module>postgresql</module>
-        <module>sql-lite</module>
         <module>sql-server</module>
         <module>sybase</module>
     </modules>

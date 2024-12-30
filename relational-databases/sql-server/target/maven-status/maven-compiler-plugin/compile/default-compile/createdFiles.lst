@@ -1,2 +1,2 @@
-test/DemoSqlServerJDBC.class
-batching/DemoSqlServerBatching.class
+DemoSqlServerBatching.class
+DemoSqlServerJDBC.class

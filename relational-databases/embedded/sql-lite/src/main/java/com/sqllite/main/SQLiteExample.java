@@ -10,7 +10,8 @@ import java.sql.Statement;
 public class SQLiteExample {
 
     // TODO. 必须提供SQLite DB的完整路径
-    public static final String DB_FILE_PATH = "relational-databases\\sql-lite\\src\\main\\resources\\session.db";
+    public static final String DB_FILE_PATH =
+            "relational-databases\\embedded\\sql-lite\\src\\main\\resources\\session.db";
 
     public static void main(String[] args) {
         Path dbPath = FileSystems.getDefault().getPath(DB_FILE_PATH);

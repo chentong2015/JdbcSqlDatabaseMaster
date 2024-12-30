@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/orm-liquibase/liquibase-core-4-5/pom.xml" />
         <option value="$PROJECT_DIR$/orm-liquibase/liquibase-core-4-18/pom.xml" />
         <option value="$PROJECT_DIR$/orm-liquibase/liquibase-core-basic/pom.xml" />
+        <option value="$PROJECT_DIR$/relational-databases/embedded/sql-lite/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

@@ -1,4 +1,4 @@
-com/psql/main/datetime/DemoDateTime.class
-com/psql/main/settings/PostgresSqlSettingsTable.class
-com/psql/main/DemoPostgresJDBC.class
-com/psql/main/batching/PostgresSqlBatching.class
+settings/PostgresSqlSettingsTable.class
+DemoPostgresJDBC.class
+datetime/DemoDateTime.class
+batching/PostgresSqlBatching.class

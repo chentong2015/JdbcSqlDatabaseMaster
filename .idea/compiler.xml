@@ -15,7 +15,6 @@
         <module name="design-jdbc-driver" />
         <module name="sql-server" />
         <module name="hikaricp" />
-        <module name="h2-db" />
         <module name="sql-lite" />
         <module name="postgresql" />
         <module name="orm-design-core" />
@@ -30,6 +29,7 @@
       <module name="distributed-database" target="15" />
       <module name="distributed-db" target="15" />
       <module name="document-db-mongodb" target="11" />
+      <module name="h2-db" target="11" />
       <module name="hyper-sql" target="15" />
       <module name="jakarta-persistence-api" target="17" />
       <module name="java-persistence-api" target="17" />

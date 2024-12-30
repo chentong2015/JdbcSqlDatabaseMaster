@@ -1,9 +1,2 @@
-locking/ReadWriteLock.class
-index/IndexSpecification.class
-transaction/TransactionConcurrencyMvcc.class
-index/IndexDataStructure.class
-logging/InnoDBRedoLog.class
-MysqlOptimization.class
-caching/MysqlServerCache.class
 batching/MySqlBatching.class
-distributed/id/MysqlAutoIncrementId.class
+logging/InnoDBRedoLog.class

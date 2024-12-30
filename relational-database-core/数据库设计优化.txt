@@ -2,11 +2,7 @@ Catalog和Schema是相同的概念
 - Catalog is used with Oracle, DB2 and MySQL
 - Schema is for PostgresSQL
 
-基本原则: 满足数据库开发常见规范和约束
-基础优化策略：数据库表优化，索引优化，SQL慢查询的优化
-高级优化策略: 分布式缓存，CDN，数据库读写分离(CopyOnWrite思想)，换数据库 NoSQL
-
-TODO: 数据库表优化
+TODO: 数据库表设计规范
 1. 表的字段尽可能用NOT NULL
 2. 字段长度固定的表查询会更快
 3. 把数据库的大表按时间或一些标志分成小表
