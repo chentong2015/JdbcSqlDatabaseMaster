@@ -15,9 +15,9 @@
     </properties>
 
     <modules>
+        <module>base-jdbc-driver</module>
         <module>design-connection-pool</module>
         <module>relational-database-core</module>
         <module>relational-databases</module>
-        <module>design-jdbc-driver</module>
     </modules>
 </project>

@@ -12,7 +12,6 @@
         <module name="sybase" />
         <module name="relational-database-test" />
         <module name="commons-dbcp2" />
-        <module name="design-jdbc-driver" />
         <module name="sql-server" />
         <module name="hikaricp" />
         <module name="sql-lite" />
@@ -21,6 +20,7 @@
         <module name="entity-class-parser" />
         <module name="mysql" />
         <module name="relational-database-core" />
+        <module name="base-jdbc-driver" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
