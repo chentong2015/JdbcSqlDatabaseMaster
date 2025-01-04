@@ -1,5 +1,4 @@
-package types.timestamp;
-
+import java.sql.Timestamp;
 import java.time.Clock;
 import java.time.Instant;
 import java.util.Date;
@@ -13,6 +12,16 @@ import java.util.TimeZone;
 // 2. Override the JPA engine's timestamp setters in order not to use the default timezone
 //    however this should be done at the JPA API level
 public class JdbcTimestamp {
+
+    public static void main(String[] args) {
+        // Timestamp是Date类型的一个包装类型，方便映射到SQL Type的时间戳类型
+        // A thin wrapper around java.util.Date that allows the JDBC API
+        // to identify this as an SQL TIMESTAMP value.
+
+        // TODO. Timestamp本质上代表DateTime，一个具体的时刻
+        long time = System.currentTimeMillis();
+        Timestamp timestamp = new Timestamp(time);
+    }
 
     // Calculate a shiftedTimestamp in order to get a correct UTC timestamp in the DB
     private static Date getShiftedUtcTimestamp() {

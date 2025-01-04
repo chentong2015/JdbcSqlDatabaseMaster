@@ -1,12 +1,6 @@
-TODO. 从编程语言的类型映射到SQL数据库中存储数据的类型
-java.sql.Types JDBC Types
-[1] JDBC type code  -> CHAR
-[12] JDBC type code -> VARCHAR 对应代码中的字符串类型
-[-9] NVARCHAR
-[-16] LONGNVARCHAR
+TODO. 根据存储数据(量)的不同，映射存储成不同的SQL Types
 
-SQL Data Types > Character data types
-通常支持的字符数据类型，根据存储数据的不同而选择对于的JDBC Type
+Character data types:
 1. Char data type
    CHAR( max-length ) 存储定长的字符长度
    The CHAR data type stores character data, up to 32767 bytes.
