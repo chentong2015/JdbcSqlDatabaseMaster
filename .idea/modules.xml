@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/database-design/postgre-sql/postgre-sql.iml" filepath="$PROJECT_DIR$/database-design/postgre-sql/postgre-sql.iml" />
-      <module fileurl="file://$PROJECT_DIR$/jdbc-database/relational-database-core.iml" filepath="$PROJECT_DIR$/jdbc-database/relational-database-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/storage-engines/storage-engine.iml" filepath="$PROJECT_DIR$/storage-engines/storage-engine.iml" />
     </modules>
   </component>
