@@ -1,4 +1,4 @@
-package fectch;
+package jdbc_fectch;
 
 import java.sql.*;
 

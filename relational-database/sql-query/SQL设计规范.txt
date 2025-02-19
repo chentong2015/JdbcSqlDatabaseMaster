@@ -1,6 +1,11 @@
-TODO: SQL设计规范:
-查询时尽量写全字段名，避免使用*查询 > 使用count(Field)替代count(*)提高统计速度
-多表连接时，尽量小表驱动(JOIN)大表 > 先对表where筛选之后再join联合查询
+TODO. SQL必须符合引擎所规定的语法, 否则抛出SQLSyntaxErrorException
+ORM Template模板语句无法直接在数据库中执行
+select * from t_blog where id=#{id};  JDBC无法执行
+select * from t_blog where id=?;      MyBatis需要对其进行改写
+
+TODO: SQL设计规范
+查询时尽量写全字段名，避免使用*查询 => 使用count(Field)替代count(*)提高统计速度
+多表连接时，尽量小表驱动(JOIN)大表 => 先对表where筛选之后再join联合查询
 使用explain和profile分析查询语句
 在千万级分页时使用limit
 对于经常使用的查询，可以开启缓存

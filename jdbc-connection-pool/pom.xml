@@ -4,31 +4,23 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>design-connection-pool</artifactId>
         <groupId>org.example</groupId>
+        <artifactId>JdbcSqlDatabaseMaster</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>commons-dbcp2</artifactId>
+    <artifactId>jdbc-connection-pool</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>base-datasource</module>
+        <module>commons-dbcp2</module>
+        <module>hikaricp</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-dbcp2</artifactId>
-            <version>2.12.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.oracle.database.jdbc</groupId>
-            <artifactId>ojdbc8</artifactId>
-            <version>21.7.0.0</version>
-        </dependency>
-    </dependencies>
-
 </project>

@@ -17,10 +17,10 @@
         <module name="sql-lite" />
         <module name="postgresql" />
         <module name="orm-design-core" />
+        <module name="jdbc-driver-connection" />
+        <module name="relational-database" />
         <module name="entity-class-parser" />
         <module name="mysql" />
-        <module name="relational-database-core" />
-        <module name="base-jdbc-driver" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/base-jdbc-driver/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/base-jdbc-driver/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/design-connection-pool/base-datasource/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/design-connection-pool/base-datasource/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/design-connection-pool/commons-dbcp2/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/design-connection-pool/commons-dbcp2/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/design-connection-pool/hikaricp/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/design-connection-pool/hikaricp/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/design-connection-pool/orm-design-core/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/design-connection-pool/orm-design-core/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/design-connection-pool/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/design-connection-pool/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jdbc-connection-pool/base-datasource/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jdbc-connection-pool/base-datasource/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jdbc-connection-pool/commons-dbcp2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jdbc-connection-pool/commons-dbcp2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jdbc-connection-pool/hikaricp/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jdbc-connection-pool/hikaricp/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jdbc-connection-pool/orm-design-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jdbc-connection-pool/orm-design-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jdbc-connection-pool/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jdbc-connection-pool/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jdbc-driver-connection/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jdbc-driver-connection/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/jpa-design/core-annotation-validation/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/jpa-design/core-annotation-validation/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/jpa-design/jakarta-persistence-api/src/main/java" charset="UTF-8" />
