@@ -10,3 +10,4 @@ The user connect to database(USER_NAME) needs to have "SELECT ON SYS.DBA_RECYCLE
 Set before we can perform this operation. Please run the following SQL to set permissions:
 > GRANT SELECT ON SYS.DBA_RECYCLEBIN TO USER_NAME;
 > GRANT SELECT ANY dictionary TO USER_NAME;
+

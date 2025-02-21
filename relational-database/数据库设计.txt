@@ -2,6 +2,11 @@ Catalog和Schema是相同的概念
 - Catalog is used with Oracle, DB2 and MySQL
 - Schema is for PostgresSQL
 
+TODO: Schema Design
+- 软件底层DB设计属于具体细节，任何变动都可能带来巨大的影响
+- 多个软件共享DB时存在版本兼容性问题，相同DB不一定支持多版本
+- 数据表Version版本之间存在兼容性，升级单个版本可能影响兼容Matrix
+
 TODO: 数据库表设计规范
 1. 表的字段尽可能用NOT NULL
 2. 字段长度固定的表查询会更快
