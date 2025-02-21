@@ -1,5 +1,5 @@
-1. 从SQL Server 11.2版本开始Driver必须设置trustServerCertificate=true
-2. 连接数据库Server服务器, 默认的数据库(Default Schema)为dbo
+从SQL Server 11.2版本开始Driver必须设置trustServerCertificate=true
+连接数据库Server服务器, 默认的数据库(Default Schema)为dbo
 
 TODO. 通常需要指定使用的数据库名称，避免使用默认的Schema
 <property name=".connection.url">

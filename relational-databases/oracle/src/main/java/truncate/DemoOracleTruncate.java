@@ -1,4 +1,4 @@
-package com.oracle.main.truncate;
+package truncate;
 
 import java.sql.Connection;
 import java.sql.SQLException;

@@ -1,5 +1,5 @@
-// 申明脚本使用的参数，在运行时动态设置参数的具体值
-// 脚本参数的传递需要通过Command Line，而非使用GUI界面 ！！
+-- 申明脚本使用的参数，在运行时动态设置参数的具体值
+-- 脚本参数的传递需要通过Command Line，而非使用GUI界面 ！！
 DECLARE
 	@n_CurrRow          INT = 0,
 	@n_MaxRow           INT = 0,
@@ -16,17 +16,14 @@ IF REVERSE(@n_CommitStep) = ')petStimmoC($' BEGIN
     RETURN;
 END
 
-PRINT '/*********************************************/';
-PRINT '/*  PURGE FUM_LOG SESSIONS                   */';
-PRINT '/*********************************************/';
 PRINT FORMAT(GETDATE(), 'dd/MM/yyyy HH:mm:ss') + ' Start of processing';
 PRINT FORMAT(GETDATE(), 'dd/MM/yyyy HH:mm:ss') + ' Date limite      : ' + @v_DateLimite;
 PRINT FORMAT(GETDATE(), 'dd/MM/yyyy HH:mm:ss') + ' Commit step size : ' + CAST(@n_CommitStep AS VARCHAR);
 
 DROP TABLE IF EXISTS #SESSIONS_TO_DELETE;
 
-// 指定特定表的生成规则
-// 注意HAVING关键字的使用
+-- 指定特定表的生成规则
+-- 注意HAVING关键字的使用
 WITH 
     RECORDED_SESSION AS(
         SELECT RECORD_KEY SESSION_KEY, UPDATE_DATE CREATE_DATE

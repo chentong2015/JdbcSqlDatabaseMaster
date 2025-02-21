@@ -1,5 +1,3 @@
-package com.oracle.main;
-
 import java.sql.*;
 
 public class DemoOracleJDBC {

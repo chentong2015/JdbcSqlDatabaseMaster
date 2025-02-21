@@ -18,7 +18,6 @@
         <module name="postgresql" />
         <module name="orm-design-core" />
         <module name="jdbc-driver-connection" />
-        <module name="relational-database" />
         <module name="entity-class-parser" />
         <module name="mysql" />
       </profile>
@@ -62,6 +61,7 @@
       <module name="orm-mybatis" target="15" />
       <module name="orm-spring-jdbc" target="15" />
       <module name="postgre-sql" target="15" />
+      <module name="relational-database" target="15" />
       <module name="relational-non-database" target="15" />
       <module name="sample-mapping-annotation" target="15" />
       <module name="sample-mapping-xml" target="15" />

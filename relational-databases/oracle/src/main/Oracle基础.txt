@@ -8,8 +8,5 @@ Oracle对字符串编码后的长度可能会超过Column列类型的设计长�
 TODO. 给指定用户赋予数据库使用权限
 The user connect to database(USER_NAME) needs to have "SELECT ON SYS.DBA_RECYCLEBIN" permissions
 Set before we can perform this operation. Please run the following SQL to set permissions:
-
-SQL> GRANT SELECT ON SYS.DBA_RECYCLEBIN TO USER_NAME;
-SQL> GRANT SELECT ANY dictionary TO USER_NAME;
-
-Oracle> select value from v$sysstat where name='user commits' 统计指定时间段内的提交量
+> GRANT SELECT ON SYS.DBA_RECYCLEBIN TO USER_NAME;
+> GRANT SELECT ANY dictionary TO USER_NAME;

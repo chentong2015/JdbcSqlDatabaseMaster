@@ -1,4 +1,4 @@
-package com.oracle.main.batching;
+package batching;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
