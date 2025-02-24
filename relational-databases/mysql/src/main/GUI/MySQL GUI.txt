@@ -1,0 +1,6 @@
+MySQL GUI界面
+1. MySQL Workbench MySQL自家开发，功能最全，社区版免费
+2. Navicat for MySQL 付费软件
+3. DataGrip by JetBrain 付费软件 (功能强大)
+4. MySQL Front 付费软件 (界面单一，功能单一)
+5. HeidiSQL 免费软件 (界面和功能足够)

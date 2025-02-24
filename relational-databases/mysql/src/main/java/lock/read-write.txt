@@ -1,0 +1,22 @@
+TODO. 根据操作角度划分
+1. 读锁(限制更新，不限制读) > 共享锁 shared locks
+2. 写锁(限制更新和读，对于不会加锁的操作Select，不会阻塞冲突) > 排他锁 exclusive locks
+
+TODO: 读锁, 只有和读锁不冲突
+#Transaction100                           #Transaction
+begin;                                    begin;
+select ... lock in share mode;
+                                          select ... lock in share mode; 可以添加读锁
+                                          select ... for update; 不能添加写锁，会阻塞 !!
+                                          select ...; 可以查询
+select ... for update; 不能添加写锁(因为前面两个事务相当于已经加了两把读锁了)
+commit;
+
+TODO: 写锁, 和读写锁都冲突
+#Transaction100                           #Transaction
+begin;                                    begin;
+select ... for update;
+                                          select ... for update; 不能再加写锁
+                                          update ...; 不能修改数据，会阻塞
+                                          select ...; 可以查询，能直接读，不涉及锁
+select ... lock in share mode; 不能再加写锁
