@@ -1,4 +1,4 @@
-TODO. 根据粒度范围划分
+TODO. 根据Size粒度范围划分
 表锁: READ [LOCAL] lock + [LOW_PRIORITY] WRITE lock
 > LOCK TABLES t1 READ;
 > SELECT COUNT(*) FROM t1;
