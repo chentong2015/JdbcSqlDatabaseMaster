@@ -1,4 +1,5 @@
-TODO. 数据库优化策略，如何提高大量Query执行效率 ?
+TODO. Database performance tuning
+数据库优化策略，如何提高大量Query执行效率 ?
 1. 创建Connection Pool: 连接池高效管理DB的连接资源
 2. 执行Batch Query: 降低发送到DB的请求，"DB交互次数"比"将数据插入表"具有更大性能影响
 3. 执行Concurrent Query: 将相互独立的操作并发执行
@@ -6,7 +7,7 @@ TODO. 数据库优化策略，如何提高大量Query执行效率 ?
 5. 添加Cache Layer: 使用缓存降低DB的请求负载
 6. 扩展DB Schema: 将数据分片存储，或使用分布式数据库
 
-TODO. 如何解决与DB交互耗时情况下UI阻塞的问题 ?
+TODO. 如何解决执行DB交互耗时UI阻塞的问题?
 1. 异步操作Async
    使用异步线程来处理背后的耗时操作, 操作完成后推送数据
    UI界面显示背后的运行进度
