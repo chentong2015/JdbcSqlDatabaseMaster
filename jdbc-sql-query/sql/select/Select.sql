@@ -1,8 +1,9 @@
- -- 取所有变化日期中的最大日期，作为最后的价格标准
 select distinct product_id, new_price as price
 from Products
 where (product_id, change_date) in (
-    -- 取某个ID的变化时间内的最大时间
+    -- 首先筛选有16号前变化日期的ID
+    -- 分组后取Group中最大日期作为有效数据值
+    -- 根据ID+Date唯一确定行并找到价格
     select product_id, max(change_date)
     from Products
     where change_date <= '2019-08-16'
