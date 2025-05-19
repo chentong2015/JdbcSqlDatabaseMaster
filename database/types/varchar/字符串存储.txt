@@ -1,5 +1,4 @@
 TODO. 根据存储数据(量)的不同，映射存储成不同的SQL Types
-
 Character data types:
 1. Char data type
    CHAR( max-length ) 存储定长的字符长度
