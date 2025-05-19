@@ -1,0 +1,7 @@
+Oracle日期存储:  TIMESTAMP(0)
+TO_DATE('2033/05/03', 'yyyy/mm/dd')
+TO_TIMESTAMP('2033-05-03 00:00:00', 'YYYY-MM-DD HH24:MI:SS')
+
+SQL Server日期存储: datetime2(7)
+Cast('2033/05/03' as datetime2)
+Convert(DATETIME, '7/7/2011', 101)
