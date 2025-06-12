@@ -1,0 +1,25 @@
+H2数据库是一个开源的关系型数据库;
+H2采用java语言编写的嵌入式数据库引擎，只是一个类库(jar文件)
+可以直接嵌入到应用项目中，不受平台的限制，一般用于数据库测试
+H2 is a JAVA database, opensource and lightweight DB that can be used in an in-memory manner.
+Embedded database it is not used for production development, mostly for development and testing.
+
+TODO. H2应用场景:
+- 可以同应用程序打包在一起发布，可以非常方便地存储少量结构化数据
+- 可用于单元测试
+- 可以用作缓存，即当做内存数据库
+
+TODO. H2三种运行模式:
+内嵌模式(Embedded Mode):
+  内嵌模式下，应用和数据库同在一个JVM中，通过JDBC进行连接
+  可持久化，但同时只能一个客户端连接。内嵌模式性能会比较好
+服务器模式(Server Mode):
+  使用服务器模式和内嵌模式一样，只不过它可以跑在另一个进程里
+混合模式:
+  第一个应用以内嵌模式启动它，对于后面的应用来说它是服务器模式跑着的
+  混合模式是内嵌模式和服务器模式的组合
+
+http://www.h2database.com/html/cheatSheet.html
+http://www.h2database.com/html/quickstart.html
+https://www.tutorialspoint.com/h2_database/h2_database_quick_guide.htm 完整的测试教程
+http://www.vue5.com/h2_database/h2_database_quick_guide.html H2数据库教程

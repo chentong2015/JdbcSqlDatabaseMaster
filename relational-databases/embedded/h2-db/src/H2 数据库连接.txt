@@ -1,0 +1,29 @@
+1. 以嵌入式(本地)连接方式连接H2数据库
+   这种连接方式默认情况下只允许有一个客户端连接到H2数据库，
+   有客户端连接到H2数据库之后，此时数据库文件就会被锁定，那么其他客户端就无法再连接了
+　　连接语法：jdbc:h2:[file:][<path>]<databaseName>
+
+　　jdbc:h2:~/test????// 连接位于用户目录下的test数据库
+　　jdbc:h2:file:/data/sample
+　　jdbc:h2:file:D:/test/H2/clc  // Windows模式
+   使用嵌入模式，不需要先启动h2的服务器，直接执行客户端即可，h2文件只能有一个进程持有
+
+   TODO. 相对位置的路径
+   URL: jdbc:h2:./ctong_retail_experience
+   login: admin admin
+
+2. 使用TCP/IP的服务器模式(远程连接)方式连接H2数据库(推荐)
+   这种连接方式就和其他数据库类似了，基于Service形式进行连接，允许多个客户端同时连接到H2数据库
+　　连接语法：jdbc:h2:tcp://<server>[:<port>]/[<path>]<databaseName>
+　　jdbc:h2:tcp://localhost/~/test
+
+   TODO. H2 Local Server:
+   URL: jdbc:h2:tcp://localhost/~/test
+   login: sa, sa
+
+   下面两个指的是同一个数据库
+   jdbc:h2:~/test  TODO: 只有一个进程能够连接
+   jdbc:h2:tcp://localhost/~/test TODO: Application和H2 Console可以同时连接
+
+3. H2数据库的内存模式 => 支持在内存中创建数据库和表
+　　连接语法：jdbc:h2:mem:<databaseName>
