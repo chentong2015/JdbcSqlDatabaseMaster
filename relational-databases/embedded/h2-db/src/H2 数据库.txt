@@ -5,9 +5,9 @@ H2 is a JAVA database, opensource and lightweight DB that can be used in an in-m
 Embedded database it is not used for production development, mostly for development and testing.
 
 TODO. H2应用场景:
-- 可以同应用程序打包在一起发布，可以非常方便地存储少量结构化数据
-- 可用于单元测试
-- 可以用作缓存，即当做内存数据库
+- 作为嵌入式DB, 和应用程序打包在一起发布
+- 用于单元测试, 在开发截断测试DB功能
+- 用作缓存, 当做内存数据库使用(数据不会持久化)
 
 TODO. H2三种运行模式:
 内嵌模式(Embedded Mode):
