@@ -1,0 +1,4 @@
+TODO. 添加Log4j API, 通过日志分析CP的参数和状态
+由于自定义MaxLifetime最大生命周期，默认的idleTimeout闲置生命周期将被抑制
+idleTimeout必须小于MaxLifetime
+[main] WARN com.zaxxer.hikari.HikariConfig -- HCP Name - idleTimeout is close to or more than maxLifetime, disabling it.

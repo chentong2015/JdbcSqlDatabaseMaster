@@ -1,9 +1,3 @@
-TODO. 添加Log4j API, 通过日志分析CP的参数和状态
-
-由于自定义MaxLifetime最大生命周期，默认的idleTimeout闲置生命周期将被抑制
-idleTimeout必须小于MaxLifetime
-[main] WARN com.zaxxer.hikari.HikariConfig -- HCP Name - idleTimeout is close to or more than maxLifetime, disabling it.
-
 连接池的所有核心参数配置
 [main] DEBUG com.zaxxer.hikari.HikariConfig -- HCP Name - configuration:
 [main] DEBUG com.zaxxer.hikari.HikariConfig -- allowPoolSuspension................................false
@@ -48,7 +42,7 @@ idleTimeout必须小于MaxLifetime
 [main] DEBUG com.zaxxer.hikari.pool.HikariPool -- HCP Name - Added connection oracle.jdbc.driver.T4CConnection@44ebcd03
 [main] INFO com.zaxxer.hikari.HikariDataSource -- HCP Name - Start completed.
 
-CP中的连接分配给指定的线程，并显示分配完毕后的Pool Stats状态: 还有多少个正在被等待的连接
+CP中连接分配给指定线程，并显示分配完毕后的Pool Stats状态: 还有多少个正在被等待的连接
 [HCP Name connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool -- HCP Name - Added connection oracle.jdbc.driver.T4CConnection@bbc65ea
 [HCP Name connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool -- HCP Name - Added connection oracle.jdbc.driver.T4CConnection@13fae787
 [HCP Name housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool -- HCP Name - Pool stats (total=3, active=3, idle=0, waiting=7)
@@ -58,8 +52,7 @@ CP中的连接分配给指定的线程，并显示分配完毕后的Pool Stats�
 [HCP Name connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool -- HCP Name - Added connection oracle.jdbc.driver.T4CConnection@70949a7d
 [HCP Name housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool -- HCP Name - Pool stats (total=5, active=5, idle=0, waiting=5)
 
-
-五个线程在指定的时间内每个等到Connection, 因此出现超时状态错误
+五个线程在指定时间内没有等到Connection, 因此出现超时状态错误
 [Thread-8] DEBUG com.zaxxer.hikari.pool.HikariPool -- HCP Name - Timeout failure stats (total=5, active=5, idle=0, waiting=2)
 [Thread-10] DEBUG com.zaxxer.hikari.pool.HikariPool -- HCP Name - Timeout failure stats (total=5, active=5, idle=0, waiting=2)
 [Thread-9] DEBUG com.zaxxer.hikari.pool.HikariPool -- HCP Name - Timeout failure stats (total=5, active=5, idle=0, waiting=2)
