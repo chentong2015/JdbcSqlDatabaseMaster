@@ -7,7 +7,7 @@ import java.sql.Statement;
 public class TestConnectionPool {
 
     public static void main(String[] args) throws SQLException, InterruptedException {
-        testConnectionWaitTimeout();
+        testConnectionClose();
         Thread.sleep(60000);
         System.out.println("Done");
     }
@@ -18,14 +18,11 @@ public class TestConnectionPool {
         DataSource dataSource = HikariCPManager.getDataSource(2);
         try(Connection connection = dataSource.getConnection();
             PreparedStatement statement = connection.prepareStatement(query)) {
-            int row = statement.executeUpdate();
-            System.out.println("Done Insert");
-        } catch (SQLException exception) {
-            exception.printStackTrace();
+            System.out.println(statement.executeUpdate());
         }
     }
 
-    // TODO. 测试连接池中的连接泄露: 保证调用Connection.close()关闭
+    // TODO. 测试Connection连接泄露: 保证调用Connection.close()关闭
     public static void testConnectionLeak() throws SQLException {
         DataSource dataSource = HikariCPManager.getDataSource(2);
         String query = "insert into test (id, value) values (";
@@ -44,7 +41,7 @@ public class TestConnectionPool {
         }
     }
 
-    // TODO. 测试Connection Timeout超时异常: 在指定时间段内连接池没有返回可用的连接
+    // TODO. 测试超时异常: 在指定时间段内连接池没有返回可用的连接
     public static void testConnectionWaitTimeout() throws SQLException {
         DataSource dataSource = HikariCPManager.getDataSource(2);
         String query = "insert into test (id, value) values (";

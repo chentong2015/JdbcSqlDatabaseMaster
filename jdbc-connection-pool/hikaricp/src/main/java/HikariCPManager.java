@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class HikariCPManager {
 
-    public static DataSource getDataSource(int threads) throws SQLException {
+    public static DataSource getDataSource(int threads) {
         HikariDataSource dataSource = new HikariDataSource();
         dataSource.setPoolName("HCP Name");
         dataSource.setJdbcUrl("jdbc:oracle:thin:@//localhost:1555/orclcdb");
@@ -28,9 +28,9 @@ public class HikariCPManager {
         dataSource.setConnectionTimeout(60000);
 
         // 处于闲置状态的Connection的超时时间, 默认10m
-        // 如果这个参数接近或者超过MaxLifetime最大生命周期，则被Disable
+        // idleTimeout必须小于MaxLifetime
+        // 如果这个参数接近或者超过MaxLifetime最大生命周期，则被Disable !!
         dataSource.setIdleTimeout(500000);
-
 
         // TODO. MaxLifetime参数可能造成异常，如何模拟被DB超时 ?
         // 连接的最大存活时间，超过生命周期的连接(没有在被使用的连接)将被移除
@@ -45,22 +45,22 @@ public class HikariCPManager {
 
         // Pool will wait for a connection to be validated as alive.
         dataSource.setValidationTimeout(3000);
+        return dataSource;
+    }
 
-
-        // TODO. 判断CP中获取的连接是否有效，注意连接泄露
+    // TODO. 判断CP中获取的连接是否有效，注意连接泄露
+    // 推荐使用Connection.isValid()高效验证
+    private static void verifyDataSourceInit(HikariDataSource dataSource) throws SQLException {
         try (Connection connection = dataSource.getConnection()) {
             System.out.println("Valid:" + connection.isValid(0));
         }
 
-        // 推荐使用Connection.isValid()高效验证
         // SQL query to be executed to test the validity of connections
-        dataSource.setConnectionTestQuery("test select query");
+        // dataSource.setConnectionTestQuery("test select query");
 
         // 使用创建出来的连接执行初始化的SQL，完成DB数据的准备
         // SQL string that will be executed on all new connections when they are created
         // before they are added to the pool.
-        dataSource.setConnectionInitSql("init query");
-
-        return dataSource;
+        // dataSource.setConnectionInitSql("init query");
     }
 }

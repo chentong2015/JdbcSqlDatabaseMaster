@@ -16,6 +16,7 @@
         <module>custom-datasource</module>
         <module>commons-dbcp2</module>
         <module>hikaricp</module>
+        <module>hikaricp-monitoring</module>
     </modules>
 
     <properties>

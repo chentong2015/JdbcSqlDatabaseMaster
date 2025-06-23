@@ -36,6 +36,9 @@
 [main] DEBUG com.zaxxer.hikari.HikariConfig -- username................................"fmm"
 [main] DEBUG com.zaxxer.hikari.HikariConfig -- validationTimeout................................5000
 
+由于自定义MaxLifetime最大生命周期，默认的idleTimeout闲置生命周期将被抑制
+[main] WARN com.zaxxer.hikari.HikariConfig -- HCP Name - idleTimeout is close to or more than maxLifetime, disabling it.
+
 连接池启动并准备完毕
 [main] INFO com.zaxxer.hikari.HikariDataSource -- HCP Name - Starting...
 [main] DEBUG com.zaxxer.hikari.util.DriverDataSource -- Loaded driver with class name oracle.jdbc.OracleDriver for jdbcUrl=jdbc:oracle:thin:@//localhost:1555/orclcdb
