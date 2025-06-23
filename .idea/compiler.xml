@@ -7,9 +7,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="base-datasource" />
+        <module name="hikaricp-monitoring" />
         <module name="oracle" />
         <module name="sybase" />
+        <module name="custom-datasource" />
         <module name="relational-database-test" />
         <module name="commons-dbcp2" />
         <module name="sql-server" />

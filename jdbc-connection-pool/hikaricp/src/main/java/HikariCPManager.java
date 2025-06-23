@@ -4,7 +4,7 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-public class HikariCPHandler {
+public class HikariCPManager {
 
     public static DataSource getDataSource(int threads) throws SQLException {
         HikariDataSource dataSource = new HikariDataSource();

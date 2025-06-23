@@ -18,11 +18,6 @@ TODO. 数据库连接池基本逻辑 ?
 4. 连接池核心参数: 重要的核心参数需要根据项目运行场景而定
 5. 性能和可靠性: 必须具有(网络中断)自动重连的功能, 设置超时定期回收连接
 
-TODO. 连接池Monitoring ? 线程池运行日志可以判断连接的分配
-1. 监测连接池中连接的使用情况和闲置情况 ?
-2. 判断那些线程占用数据库连接? 那些线程占用了不止一个连接?
-3. 如何监测事务的提交量(单位时间的commits数量影响插入的效率) ?
-
 开源数据库连接池: C3P0, Proxool, DBCP, BoneCP, Druid
 第三方数据库连接池: commons-dbcp2, HikariCP, hibernate, mybatis, Tomcat Pool
 https://github.com/brettwooldridge/HikariCP
