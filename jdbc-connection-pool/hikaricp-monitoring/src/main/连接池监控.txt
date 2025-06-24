@@ -3,16 +3,11 @@ TODO. Static: 通过Log日志/周期性的打印连接池的状态
 - 使用@Scheduled周期性的输出
 
 TODO. Static: 开启Actuator和Micrometer, 通过Endpoints来监控
-# application.properties
+详见spring-boot-health-metrics项目测试
 management.endpoints.web.exposure.include=*
 management.endpoint.metrics.enabled=true
 management.metrics.enable.hikaricp=true
-
-<dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-actuator</artifactId>
-</dependency>
-
+请求查询hikaricp相关的指标数据
 http://localhost:8080/actuator/metrics/hikaricp.connections
 http://localhost:8080/actuator/metrics/hikaricp.connections.active
 
