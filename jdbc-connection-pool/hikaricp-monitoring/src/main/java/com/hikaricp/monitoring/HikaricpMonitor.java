@@ -22,6 +22,7 @@ public class HikaricpMonitor {
             System.out.println("Idle: " + poolMXBean.getIdleConnections());
             System.out.println("Total: " + poolMXBean.getTotalConnections());
             System.out.println("Threads Awaiting: " + poolMXBean.getThreadsAwaitingConnection());
+            System.out.println("---------------------------------------------------------------");
         }
     }
 }
