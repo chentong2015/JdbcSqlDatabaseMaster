@@ -48,7 +48,13 @@ public class HikariCPManager {
         return dataSource;
     }
 
-    // TODO. 判断CP中获取的连接是否有效，注意连接泄露
+    // TODO. 将连接池相关指标暴露为JMX MBeans用于监控
+    // Configures whether HikariCP self-registers the HikariConfigMXBean and HikariPoolMXBean in JMX.
+    private static void registerMbeans(HikariDataSource dataSource) {
+        dataSource.setRegisterMbeans(true);
+    }
+
+    // TODO. 判断CP中获取的连接是否有效, 注意连接泄露
     // 推荐使用Connection.isValid()高效验证
     private static void verifyDataSourceInit(HikariDataSource dataSource) throws SQLException {
         try (Connection connection = dataSource.getConnection()) {
